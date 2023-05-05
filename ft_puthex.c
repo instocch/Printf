@@ -17,7 +17,7 @@ int	ft_puthex(int long n, char hex)
 	int	i;
 
 	i = 0;
-	if (n > 16)
+	if (n >= 16)
 		i += ft_puthex(n / 16, hex);
 	i += ft_putchar(hex[n % 16]);
 	return (i);
