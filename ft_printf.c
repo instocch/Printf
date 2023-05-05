@@ -43,13 +43,13 @@ int	ft_printf(const char *format, ...)
 	int		i;
 
 	if (!format)
-		return (NULL);
+		return (0);
 	count = 0;
 	i = 0;
 	va_start (args, format);
 	while (format[i] != '\0')
 	{
-		if (format == '%')
+		if (format[i] == '%')
 		{
 			i++;
 			count += ft_handle(args, format[i]);
